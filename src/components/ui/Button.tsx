@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
 import { Loader2 } from "lucide-react";
 
 export const buttonVariants = cva(
-  "inline-flex items-center justify-center font-bold rounded text-sm transition-all focus:outline-none active:bg-zinc-600 disabled:opacity-50 disable:pointer-events-none",
+  "inline-flex items-center justify-center font-medium rounded text-sm transition-all focus:outline-none active:bg-zinc-600 disabled:opacity-50 disable:pointer-events-none",
   {
     variants: {
       variant: {
@@ -29,6 +29,7 @@ export const buttonVariants = cva(
 );
 
 interface ButtonProps extends HTMLAttributes<HTMLButtonElement>, VariantProps<typeof buttonVariants> {
+  type?: "button" | "submit" | "reset" | undefined;
   isLoading?: boolean;
 }
 

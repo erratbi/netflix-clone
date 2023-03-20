@@ -26,8 +26,8 @@ const LanguageSwitch: FC<LanguageSwitchProps> = ({ onChange }) => {
           as={Button}
           className="border border-zinc-600 bg-black/50 px-3 text-base font-normal text-white hover:bg-black/50 hover:text-white"
         >
-          <Globe className="mr-2 h-4 w-4" />
-          <span>{language.name}</span>
+          <Globe className="h-4 w-4 md:mr-2" />
+          <span className="hidden md:inline">{language.name}</span>
           <ChevronDown className="ml-3 h-4 w-4" aria-hidden="true" />
         </Menu.Button>
       </div>
