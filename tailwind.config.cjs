@@ -1,3 +1,4 @@
+const { fontFamily } = require("tailwindcss/defaultTheme");
 /** @type {import('tailwindcss').Config} */
 const config = {
   content: ["./src/**/*.{js,ts,jsx,tsx}"],
@@ -12,7 +13,7 @@ const config = {
         }
       },
       fontFamily: {
-        sans: ["Open Sans", "sans-serif"],
+        sans: ["Netflix Sans", ...fontFamily.sans],
       }
     },
   },
